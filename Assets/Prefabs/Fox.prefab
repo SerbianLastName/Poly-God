@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7395166878686290392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5835452083641406411}
+  - component: {fileID: 8985062361614467402}
+  - component: {fileID: 8107597786515011199}
+  m_Layer: 0
+  m_Name: Fox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5835452083641406411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7395166878686290392}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 48385824743467945}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8985062361614467402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7395166878686290392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa81e76bbb0534ab4a7eac5974e8565f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colourMaterialIndex: 0
+  species: 8
+  isPlant: 0
+  material: {fileID: -876546973899608171, guid: 8c52673f9ab858742985920544aa0b34,
+    type: 3}
+  coord:
+    x: 0
+    y: 0
+  mapIndex: 0
+  mapCoord:
+    x: 0
+    y: 0
+  diet: 20
+  currentAction: 0
+  maleColour: {r: 0.8207547, g: 0.42020229, b: 0.14453536, a: 0}
+  femaleColour: {r: 1, g: 0.35353047, b: 0, a: 0}
+  isPrey: 0
+  timeBetweenActionChoices: 1.5
+  moveSpeedMinMax: {x: 2, y: 3}
+  sexDriveMinMax: {x: 0.85, y: 1.25}
+  litterMinMax: {x: 1, y: 3}
+  sizeMinMax: {x: 0.8, y: 1.2}
+  jumpMinMax: {x: 0.05, y: 0.8}
+  geneHealthMinMax: {x: 0.8, y: 1.2}
+  oldAgeMinMax: {x: 6, y: 8}
+  thinkMinMax: {x: 0.5, y: 2}
+  poopSpawns: []
+  animalType: Fox
+  hunger: 0
+  thirst: 0
+  horny: 0
+  disease: 0
+  geneHealth: 1
+  cannibalChance: 0
+  age: 0
+  term: 0
+  poopCheck: 0
+  hornyMod: 0
+  hungerMod: 0
+  mutMod: 0
+  diseaseMod: 0
+--- !u!114 &8107597786515011199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7395166878686290392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116eb9910fa7f73499504523cbc3c71c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: Fox
+--- !u!1001 &513797230076021826
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5835452083641406411}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 8c52673f9ab858742985920544aa0b34,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c52673f9ab858742985920544aa0b34,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c52673f9ab858742985920544aa0b34,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c52673f9ab858742985920544aa0b34,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c52673f9ab858742985920544aa0b34,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c52673f9ab858742985920544aa0b34,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.214
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c52673f9ab858742985920544aa0b34,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.252
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c52673f9ab858742985920544aa0b34,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c52673f9ab858742985920544aa0b34,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c52673f9ab858742985920544aa0b34,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c52673f9ab858742985920544aa0b34,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c52673f9ab858742985920544aa0b34,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c52673f9ab858742985920544aa0b34,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 8c52673f9ab858742985920544aa0b34,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8c52673f9ab858742985920544aa0b34,
+        type: 3}
+      propertyPath: m_Name
+      value: Fox (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c52673f9ab858742985920544aa0b34, type: 3}
+--- !u!4 &48385824743467945 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8c52673f9ab858742985920544aa0b34,
+    type: 3}
+  m_PrefabInstance: {fileID: 513797230076021826}
+  m_PrefabAsset: {fileID: 0}
