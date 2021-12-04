@@ -51,7 +51,7 @@ public class Environment : MonoBehaviour
         prng = new System.Random();
         objectPooler = ObjectPooler.Instance;
         Init();
-        SpawnInitialPopulations();
+        // SpawnInitialPopulations();
 
     }
 

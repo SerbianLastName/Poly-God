@@ -14,6 +14,7 @@ public class GamePlayEvents : MonoBehaviour
     [SerializeField] GameObject lordUI;
     [SerializeField] GameObject loadingUI;
     [SerializeField] GameObject buyWaitUI;
+    [SerializeField] GameObject newGameUI;
 
     [SerializeField] GameObject bG;
     [SerializeField] Environment environment;
@@ -52,14 +53,21 @@ public class GamePlayEvents : MonoBehaviour
         }
     }
 
-    public void StartWorld()
+    public void StartWorld(Dictionary<string, int> spawns)
     {
+        newGameUI.GetComponent<Canvas>().enabled = false;
         pickPlotUI.GetComponent<Canvas>().enabled = false;
         baseOSUI.GetComponent<Canvas>().enabled = false;
         bG.GetComponent<Canvas>().enabled = false;
         mainUI.GetComponent<Canvas>().enabled = true;
         cameraController.inMenu = false;
         environment.RealStart();
+        foreach (KeyValuePair<string, int> animal in spawns)
+        { environment.SpawnFromMenu(animal.Value, animal.Key); }
+    }
+    public void StartSpawns(Dictionary<string, int> spawns)
+    {
+
     }
 
     // UI actions
@@ -88,6 +96,13 @@ public class GamePlayEvents : MonoBehaviour
         Debug.Log(plots[plotIndex]);
         terGen.terrainNoise.seed = plots[plotIndex];
         terGen.Generate();
+    }
+
+    public void NewGame()
+    {
+        pickPlotUI.GetComponent<Canvas>().enabled = false;
+        newGameUI.GetComponent<Canvas>().enabled = true;
+
     }
 
     public void OpenStats()
