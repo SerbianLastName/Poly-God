@@ -70,7 +70,7 @@ public class Environment : MonoBehaviour
     {
         var spawnPrng = new System.Random(seed);
         var spawnCoords = new List<Coord>(walkableCoords);
-        // ObjectPooler _objectPooler = ObjectPooler.Instance;
+        ObjectPooler _objectPooler = ObjectPooler.Instance;
 
         if (preyTypes.Contains(_type))
         {
@@ -96,7 +96,8 @@ public class Environment : MonoBehaviour
             Coord coord = spawnCoords[spawnCoordIndex];
             spawnCoords.RemoveAt(spawnCoordIndex);
             Quaternion rot = new Quaternion(0, 0, 0, 0);
-            GameObject _entity = objectPooler.SpawnFromPool(_type, new Vector3(coord.x, 0, coord.y), rot);
+            Debug.Log(_type);
+            GameObject _entity = _objectPooler.SpawnFromPool(_type, new Vector3(coord.x, 0, coord.y), rot);
             LivingEntity entity = _entity.GetComponent<LivingEntity>();
             entity.Init(coord);
             entity.transform.Rotate(0, Random.Range(0, 359), 0);

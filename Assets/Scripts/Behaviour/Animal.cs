@@ -94,7 +94,21 @@ public class Animal : LivingEntity
 
     // Food Values
 
-    Dictionary<string, float> foodValues = new Dictionary<string, float>() { { "Rabbit", 0.15f }, { "Mouse", 0.05f }, { "Raccoon", 0.25f }, { "Fox", 0.25f } };
+    Dictionary<string, float> foodValues = new Dictionary<string, float>() {
+        { "Rabbit", 0.15f },
+        { "Mouse", 0.05f },
+        { "Raccoon", 0.25f },
+        { "Frog", 0.25f },
+        { "Pigeon", 0.25f },
+        { "Duck", 0.25f },
+        { "Weasel", 0.25f },
+        { "Badger", 0.25f },
+        { "Pig", 0.25f },
+        { "Possum", 0.25f },
+        { "Turtle", 0.25f },
+        { "Squirrel", 0.25f },
+        { "Fox", 0.25f }
+        };
 
     public override void Init(Coord coord)
     {

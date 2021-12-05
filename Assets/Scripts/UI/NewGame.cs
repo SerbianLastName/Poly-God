@@ -83,102 +83,102 @@ public class NewGame : MonoBehaviour
     {
         if (animalIndex == 0)
         {
-            spawnList["frog"] = (int)frogSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
+            spawnList["Frog"] = (int)frogSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
             frogCount.text = ((int)frogSlider.value * infoForUI[animalIndex].animalPerSpawnPoint).ToString();
         }
         if (animalIndex == 1)
         {
-            spawnList["mouse"] = (int)mouseSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
+            spawnList["Mouse"] = (int)mouseSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
             mouseCount.text = ((int)mouseSlider.value * infoForUI[animalIndex].animalPerSpawnPoint).ToString();
         }
         if (animalIndex == 2)
         {
-            spawnList["pigeon"] = (int)pigeonSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
+            spawnList["Pigeon"] = (int)pigeonSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
             pigeonCount.text = ((int)pigeonSlider.value * infoForUI[animalIndex].animalPerSpawnPoint).ToString();
         }
         if (animalIndex == 3)
         {
-            spawnList["squirrel"] = (int)squirrelSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
+            spawnList["Squirrel"] = (int)squirrelSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
             squirrelCount.text = ((int)squirrelSlider.value * infoForUI[animalIndex].animalPerSpawnPoint).ToString();
         }
         if (animalIndex == 4)
         {
-            spawnList["duck"] = (int)duckSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
+            spawnList["Duck"] = (int)duckSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
             duckCount.text = ((int)duckSlider.value * infoForUI[animalIndex].animalPerSpawnPoint).ToString();
         }
         if (animalIndex == 5)
         {
-            spawnList["rabbit"] = (int)rabbitSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
+            spawnList["Rabbit"] = (int)rabbitSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
             rabbitCount.text = ((int)rabbitSlider.value * infoForUI[animalIndex].animalPerSpawnPoint).ToString();
         }
         if (animalIndex == 6)
         {
-            spawnList["turtle"] = (int)turtleSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
+            spawnList["Turtle"] = (int)turtleSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
             turtleCount.text = ((int)turtleSlider.value * infoForUI[animalIndex].animalPerSpawnPoint).ToString();
         }
         if (animalIndex == 7)
         {
-            spawnList["possum"] = (int)possumSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
+            spawnList["Possum"] = (int)possumSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
             possumCount.text = ((int)possumSlider.value * infoForUI[animalIndex].animalPerSpawnPoint).ToString();
         }
         if (animalIndex == 8)
         {
-            spawnList["raccoon"] = (int)raccoonSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
+            spawnList["Raccoon"] = (int)raccoonSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
             raccoonCount.text = ((int)raccoonSlider.value * infoForUI[animalIndex].animalPerSpawnPoint).ToString();
         }
         if (animalIndex == 9)
         {
-            spawnList["pig"] = (int)pigSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
+            spawnList["Pig"] = (int)pigSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
             pigCount.text = ((int)pigSlider.value * infoForUI[animalIndex].animalPerSpawnPoint).ToString();
         }
         if (animalIndex == 10)
         {
-            spawnList["weasel"] = (int)weaselSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
+            spawnList["Weasel"] = (int)weaselSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
             weaselCount.text = ((int)weaselSlider.value * infoForUI[animalIndex].animalPerSpawnPoint).ToString();
         }
         if (animalIndex == 11)
         {
-            spawnList["badger"] = (int)badgerSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
+            spawnList["Badger"] = (int)badgerSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
             badgerCount.text = ((int)badgerSlider.value * infoForUI[animalIndex].animalPerSpawnPoint).ToString();
         }
         if (animalIndex == 12)
         {
-            spawnList["fox"] = (int)foxSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
+            spawnList["Fox"] = (int)foxSlider.value * infoForUI[animalIndex].animalPerSpawnPoint;
             foxCount.text = ((int)foxSlider.value * infoForUI[animalIndex].animalPerSpawnPoint).ToString();
         }
         spawnPoints = 38 - (int)frogSlider.value - (int)mouseSlider.value - (int)pigeonSlider.value - (int)squirrelSlider.value - (int)duckSlider.value - (int)rabbitSlider.value - (int)turtleSlider.value - (int)possumSlider.value - (int)raccoonSlider.value - (int)pigSlider.value - (int)weaselSlider.value - (int)badgerSlider.value - (int)foxSlider.value;
         if (spawnPoints >= 0)
         {
             spawnPointsText.text = spawnPoints.ToString();
-            validSpawnList["frog"] = (int)frogSlider.value;
-            validSpawnList["mouse"] = (int)mouseSlider.value;
-            validSpawnList["pigeon"] = (int)pigeonSlider.value;
-            validSpawnList["squirrel"] = (int)squirrelSlider.value;
-            validSpawnList["duck"] = (int)duckSlider.value;
-            validSpawnList["rabbit"] = (int)rabbitSlider.value;
-            validSpawnList["turtle"] = (int)turtleSlider.value;
-            validSpawnList["possum"] = (int)possumSlider.value;
-            validSpawnList["raccoon"] = (int)raccoonSlider.value;
-            validSpawnList["pig"] = (int)pigSlider.value;
-            validSpawnList["weasel"] = (int)weaselSlider.value;
-            validSpawnList["badger"] = (int)badgerSlider.value;
-            validSpawnList["fox"] = (int)foxSlider.value;
+            validSpawnList["Frog"] = (int)frogSlider.value;
+            validSpawnList["Mouse"] = (int)mouseSlider.value;
+            validSpawnList["Pigeon"] = (int)pigeonSlider.value;
+            validSpawnList["Squirrel"] = (int)squirrelSlider.value;
+            validSpawnList["Duck"] = (int)duckSlider.value;
+            validSpawnList["Rabbit"] = (int)rabbitSlider.value;
+            validSpawnList["Turtle"] = (int)turtleSlider.value;
+            validSpawnList["Possum"] = (int)possumSlider.value;
+            validSpawnList["Raccoon"] = (int)raccoonSlider.value;
+            validSpawnList["Pig"] = (int)pigSlider.value;
+            validSpawnList["Weasel"] = (int)weaselSlider.value;
+            validSpawnList["Badger"] = (int)badgerSlider.value;
+            validSpawnList["Fox"] = (int)foxSlider.value;
         }
         else
         {
-            frogSlider.value = validSpawnList["frog"];
-            mouseSlider.value = validSpawnList["mouse"];
-            pigeonSlider.value = validSpawnList["pigeon"];
-            squirrelSlider.value = validSpawnList["squirrel"];
-            duckSlider.value = validSpawnList["duck"];
-            rabbitSlider.value = validSpawnList["rabbit"];
-            turtleSlider.value = validSpawnList["turtle"];
-            possumSlider.value = validSpawnList["possum"];
-            raccoonSlider.value = validSpawnList["raccoon"];
-            pigSlider.value = validSpawnList["pig"];
-            weaselSlider.value = validSpawnList["weasel"];
-            badgerSlider.value = validSpawnList["badger"];
-            foxSlider.value = validSpawnList["fox"];
+            frogSlider.value = validSpawnList["Frog"];
+            mouseSlider.value = validSpawnList["Mouse"];
+            pigeonSlider.value = validSpawnList["Pigeon"];
+            squirrelSlider.value = validSpawnList["Squirrel"];
+            duckSlider.value = validSpawnList["Duck"];
+            rabbitSlider.value = validSpawnList["Rabbit"];
+            turtleSlider.value = validSpawnList["Turtle"];
+            possumSlider.value = validSpawnList["Possum"];
+            raccoonSlider.value = validSpawnList["Raccoon"];
+            pigSlider.value = validSpawnList["Pig"];
+            weaselSlider.value = validSpawnList["Weasel"];
+            badgerSlider.value = validSpawnList["Badger"];
+            foxSlider.value = validSpawnList["Fox"];
         }
     }
 
