@@ -96,12 +96,52 @@ public class Environment : MonoBehaviour
             Coord coord = spawnCoords[spawnCoordIndex];
             spawnCoords.RemoveAt(spawnCoordIndex);
             Quaternion rot = new Quaternion(0, 0, 0, 0);
-            Debug.Log(_type);
-            GameObject _entity = _objectPooler.SpawnFromPool(_type, new Vector3(coord.x, 0, coord.y), rot);
+            GameObject _entity = objectPooler.SpawnFromPool(_type, new Vector3(coord.x, 0, coord.y), rot);
             LivingEntity entity = _entity.GetComponent<LivingEntity>();
             entity.Init(coord);
             entity.transform.Rotate(0, Random.Range(0, 359), 0);
             speciesMaps[entity.species].Add(entity, coord);
+        }
+    }
+
+    public void NewGameSpawns(Dictionary<string, int> spawns)
+    {
+        var spawnPrng = new System.Random(seed);
+        var spawnCoords = new List<Coord>(walkableCoords);
+        ObjectPooler _objectPooler = ObjectPooler.Instance;
+
+        foreach (KeyValuePair<string, int> animal in spawns)
+        {
+            if (preyTypes.Contains(animal.Key))
+            {
+                GlobalScript.Instance.prey += animal.Value;
+                GlobalScript.Instance.population += animal.Value;
+            }
+            if (predTypes.Contains(animal.Key))
+            {
+                GlobalScript.Instance.pred += animal.Value;
+                GlobalScript.Instance.population += animal.Value;
+            }
+            if (plantTypes.Contains(animal.Key))
+            { GlobalScript.Instance.plants += animal.Value; }
+
+            for (int i = 0; i < animal.Value; i++)
+            {
+                if (spawnCoords.Count == 0)
+                {
+                    Debug.Log("Ran out of empty tiles to spawn initial population");
+                    break;
+                }
+                int spawnCoordIndex = spawnPrng.Next(0, spawnCoords.Count);
+                Coord coord = spawnCoords[spawnCoordIndex];
+                spawnCoords.RemoveAt(spawnCoordIndex);
+                Quaternion rot = new Quaternion(0, 0, 0, 0);
+                GameObject _entity = objectPooler.SpawnFromPool(animal.Key, new Vector3(coord.x, 0, coord.y), rot);
+                LivingEntity entity = _entity.GetComponent<LivingEntity>();
+                entity.Init(coord);
+                entity.transform.Rotate(0, Random.Range(0, 359), 0);
+                speciesMaps[entity.species].Add(entity, coord);
+            }
         }
     }
 
@@ -559,7 +599,6 @@ public class Environment : MonoBehaviour
                 GameObject _entity = objectPooler.SpawnFromPool(spawnType, new Vector3(coord.x, 0, coord.y), rot);
                 LivingEntity entity = _entity.GetComponent<LivingEntity>();
                 entity.Init(coord);
-
                 entity.transform.Rotate(0, Random.Range(0, 359), 0);
                 speciesMaps[entity.species].Add(entity, coord);
             }

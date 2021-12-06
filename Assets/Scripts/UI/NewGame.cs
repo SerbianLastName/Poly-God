@@ -51,7 +51,7 @@ public class NewGame : MonoBehaviour
     [SerializeField] Text badgerCount;
     [SerializeField] Text foxCount;
 
-    Dictionary<string, int> spawnList = new Dictionary<string, int>();
+    Dictionary<string, int> spawnList = new Dictionary<string, int>() { { "Cabbage", 250 }, { "Carrots", 250 }, { "Berries", 250 }, { "Trash", 100 }, { "Tomatoes", 250 } };
     Dictionary<string, int> validSpawnList = new Dictionary<string, int>();
 
 

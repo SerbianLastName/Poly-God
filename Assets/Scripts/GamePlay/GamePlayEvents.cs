@@ -62,8 +62,10 @@ public class GamePlayEvents : MonoBehaviour
         mainUI.GetComponent<Canvas>().enabled = true;
         cameraController.inMenu = false;
         environment.RealStart();
-        foreach (KeyValuePair<string, int> animal in spawns)
-        { environment.SpawnFromMenu(animal.Value, animal.Key); }
+        environment.NewGameSpawns(spawns);
+
+        // foreach (KeyValuePair<string, int> animal in spawns)
+        // { environment.SpawnFromMenu(animal.Value, animal.Key); }
     }
     public void StartSpawns(Dictionary<string, int> spawns)
     {

@@ -57,10 +57,10 @@ MonoBehaviour:
   mapCoord:
     x: 0
     y: 0
-  diet: 450
+  diet: 786880
   currentAction: 0
   maleColour: {r: 0.4245283, g: 0.3081086, b: 0.10679954, a: 0}
-  femaleColour: {r: 0.5754717, g: 0.48527828, b: 0.25335228, a: 0}
+  femaleColour: {r: 0.3301887, g: 0.2800956, b: 0.15159604, a: 0}
   isPrey: 1
   timeBetweenActionChoices: 1.5
   moveSpeedMinMax: {x: 1.25, y: 1.5}
@@ -72,8 +72,10 @@ MonoBehaviour:
   oldAgeMinMax: {x: 3.5, y: 4.5}
   thinkMinMax: {x: 0.5, y: 1.25}
   poopSpawns:
-  - Plant
+  - Carrots
   - Cabbage
+  - Berries
+  - Tomatoes
   animalType: Squirrel
   hunger: 0
   thirst: 0

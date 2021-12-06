@@ -57,10 +57,10 @@ MonoBehaviour:
   mapCoord:
     x: 0
     y: 0
-  diet: 386
+  diet: 448
   currentAction: 0
-  maleColour: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 0}
-  femaleColour: {r: 0.7264151, g: 0.69821775, b: 0.62818915, a: 0}
+  maleColour: {r: 0.4811321, g: 0.43876824, b: 0.43876824, a: 0}
+  femaleColour: {r: 0.5, g: 0.4744654, b: 0.408805, a: 0}
   isPrey: 1
   timeBetweenActionChoices: 1.5
   moveSpeedMinMax: {x: 1.25, y: 1.5}
@@ -72,7 +72,7 @@ MonoBehaviour:
   oldAgeMinMax: {x: 3.5, y: 4.5}
   thinkMinMax: {x: 0.5, y: 1.25}
   poopSpawns:
-  - Plant
+  - Carrots
   - Cabbage
   animalType: Duck
   hunger: 0

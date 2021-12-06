@@ -8,7 +8,7 @@
     Raccoon = (1 << 5),
     Trash = (1 << 6),
     Cabbage = (1 << 7),
-    Carrot = (1 << 8),
+    Carrots = (1 << 8),
     Frog = (1 << 9),
     Pigeon = (1 << 10),
     Squirrel = (1 << 11),
@@ -17,5 +17,9 @@
     Pig = (1 << 14),
     Weasel = (1 << 15),
     Badger = (1 << 16),
-    Turtle = (1 << 17)
+    Turtle = (1 << 17),
+    Berries = (1 << 18),
+    Tomatoes = (1 << 19),
+    Nuts = (1 << 20),
+    Apples = (1 << 21)
 }

@@ -57,7 +57,7 @@ MonoBehaviour:
   mapCoord:
     x: 0
     y: 0
-  diet: 66
+  diet: 448
   currentAction: 0
   maleColour: {r: 0.5, g: 0.5, b: 0.5, a: 0}
   femaleColour: {r: 0.7264151, g: 0.69821775, b: 0.62818915, a: 0}
@@ -72,7 +72,7 @@ MonoBehaviour:
   oldAgeMinMax: {x: 3.5, y: 4.5}
   thinkMinMax: {x: 0.5, y: 1.25}
   poopSpawns:
-  - Plant
+  - Carrots
   - Cabbage
   animalType: Pigeon
   hunger: 0

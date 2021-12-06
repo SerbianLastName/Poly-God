@@ -57,7 +57,7 @@ MonoBehaviour:
   mapCoord:
     x: 0
     y: 0
-  diet: 450
+  diet: 2097600
   currentAction: 0
   maleColour: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 0}
   femaleColour: {r: 0.14150941, g: 0.13972941, b: 0.13972941, a: 0}
@@ -72,8 +72,9 @@ MonoBehaviour:
   oldAgeMinMax: {x: 7, y: 9}
   thinkMinMax: {x: 0.5, y: 2}
   poopSpawns:
-  - Plant
-  - Cababge
+  - Cabbage
+  - Carrots
+  - Trash
   animalType: Raccoon
   hunger: 0
   thirst: 0

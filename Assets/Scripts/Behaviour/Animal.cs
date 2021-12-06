@@ -95,19 +95,19 @@ public class Animal : LivingEntity
     // Food Values
 
     Dictionary<string, float> foodValues = new Dictionary<string, float>() {
-        { "Rabbit", 0.15f },
-        { "Mouse", 0.05f },
-        { "Raccoon", 0.25f },
-        { "Frog", 0.25f },
+        { "Rabbit", 0.25f },
+        { "Mouse", 0.15f },
+        { "Raccoon", 0.55f },
+        { "Frog", 0.2f },
         { "Pigeon", 0.25f },
         { "Duck", 0.25f },
-        { "Weasel", 0.25f },
-        { "Badger", 0.25f },
-        { "Pig", 0.25f },
-        { "Possum", 0.25f },
-        { "Turtle", 0.25f },
+        { "Weasel", 0.5f },
+        { "Badger", 0.5f },
+        { "Pig", 0.5f },
+        { "Possum", 0.35f },
+        { "Turtle", 0.55f },
         { "Squirrel", 0.25f },
-        { "Fox", 0.25f }
+        { "Fox", 0.75f }
         };
 
     public override void Init(Coord coord)
@@ -230,7 +230,7 @@ public class Animal : LivingEntity
 
     protected virtual void Poop()
     {
-        if (poopSpawns.Count != 0 && UnityEngine.Random.value < 0.5f)
+        if (poopSpawns.Count != 0 && UnityEngine.Random.value < 0.035f)
         {
             int rand = UnityEngine.Random.Range(0, poopSpawns.Count - 1);
             Environment.NewPlant(coord, poopSpawns[rand]);
@@ -465,9 +465,15 @@ public class Animal : LivingEntity
         // Create new path if current is not already going to target
         if (path == null || pathIndex >= path.Length || (path[path.Length - 1] != target || path[pathIndex - 1] != moveTargetCoord))
         {
-            path = EnvironmentUtility.GetPath(coord.x, coord.y, target.x, target.y);
-            pathIndex = 0;
+            try
+            {
+                path = EnvironmentUtility.GetPath(coord.x, coord.y, target.x, target.y);
+                pathIndex = 0;
+            }
+            catch
+            { Debug.Log(currentAction); }
         }
+
     }
 
     protected void StartMoveToCoord(Coord target)

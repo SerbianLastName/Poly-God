@@ -57,7 +57,7 @@ MonoBehaviour:
   mapCoord:
     x: 0
     y: 0
-  diet: 386
+  diet: 262528
   currentAction: 0
   maleColour: {r: 0.4245283, g: 0.3081086, b: 0.10679954, a: 0}
   femaleColour: {r: 0.7264151, g: 0.69821775, b: 0.62818915, a: 0}
@@ -72,8 +72,9 @@ MonoBehaviour:
   oldAgeMinMax: {x: 3.5, y: 4.5}
   thinkMinMax: {x: 0.5, y: 1.25}
   poopSpawns:
-  - Plant
+  - Carrots
   - Cabbage
+  - Berries
   animalType: Rabbit
   hunger: 0
   thirst: 0

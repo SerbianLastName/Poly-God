@@ -57,7 +57,7 @@ MonoBehaviour:
   mapCoord:
     x: 0
     y: 0
-  diet: 386
+  diet: 2359680
   currentAction: 0
   maleColour: {r: 0.4245283, g: 0.3081086, b: 0.10679954, a: 0}
   femaleColour: {r: 0.7264151, g: 0.69821775, b: 0.62818915, a: 0}
